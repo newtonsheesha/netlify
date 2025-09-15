@@ -13,7 +13,7 @@
   <script>
     document.getElementById("fetchData").addEventListener("click", async () => {
       try {
-        const response = await fetch("/book-flights/");
+        const response = await fetch("/book-flights/en/");
         const text = await response.text();
 
         document.getElementById("output").textContent = text;
