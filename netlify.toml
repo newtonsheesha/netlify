@@ -3,21 +3,34 @@
   to = "https://vk-prod.airtrfx.com/book-flights/:splat"
   status = 200
   force = true
-
+#EM-Assets
 [[redirects]]
  from = "/em-assets/*"
   to = "https://vk-prod.airtrfx.com/em-assets/:splat"
   status = 200
   force = true
-
+#airTRFX Redirects
   [[redirects]]
  from = "/book-flights/redirect*"
   to = "https://vk-prod.airtrfx.com/book-flights/redirect:splat"
   status = 200
   force = true
-
+# Sitemap
   [[redirects]]
  from = "/book-flights/sitemap_index.xml"
   to = "https://vk-prod.airtrfx.com/book-flights/sitemap_index.xml"
   status = 200
   force = true
+
+  # 1. Long-lived static assets (30 days)
+[[headers]]
+  for = "/*.(bmp|bz2|css|doc|eot|flv|gif|gz|ico|jpeg|jpg|js|less|pdf|png|rtf|swf|woff|svg|ttf|woff2)"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, immutable"
+
+# 2. Everything else (including txt, extensionless airTRFX URLs)
+[[headers]]
+  for = "/book-flights/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
