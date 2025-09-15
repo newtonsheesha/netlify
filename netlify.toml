@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/api/*"
-  to = "http://vk-prod.airtrfx.com/:splat"
+  to = "https://vk-prod.airtrfx.com/:splat"
   status = 200
   force = true
