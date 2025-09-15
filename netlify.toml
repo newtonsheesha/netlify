@@ -1,11 +1,23 @@
 [[redirects]]
-  from = "/book-flights/en/*"
-  to = "https://vk-prod.airtrfx.com/book-flights/en/:splat"
+  from = "/book-flights/*"
+  to = "https://vk-prod.airtrfx.com/book-flights/:splat"
   status = 200
   force = true
 
 [[redirects]]
  from = "/em-assets/*"
   to = "https://vk-prod.airtrfx.com/em-assets/:splat"
+  status = 200
+  force = true
+
+  [[redirects]]
+ from = "/book-flights/redirect*"
+  to = "https://vk-prod.airtrfx.com/book-flights/redirect:splat"
+  status = 200
+  force = true
+
+  [[redirects]]
+ from = "/book-flights/sitemap_index.xml"
+  to = "https://vk-prod.airtrfx.com/book-flights/sitemap_index.xml"
   status = 200
   force = true
