@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/book-flights/en/"
+  from = "/book-flights/en/*"
   to = "https://vk-prod.airtrfx.com/book-flights/en/:splat"
   status = 200
   force = true
